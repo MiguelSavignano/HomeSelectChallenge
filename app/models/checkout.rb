@@ -11,11 +11,8 @@ class Checkout < ApplicationRecord
 
   def total
     total = @products.map(&:price).reduce(&:+)
-    discounts = calculate_discount(@products)
+    discounts = PriceRules.calculate_discount_buy_one_get_one_free(@products)
     total - discounts
   end
 
-  def calculate_discount(products)
-    0
-  end
 end
