@@ -58,12 +58,12 @@ class TodoListApp extends React.Component {
     return (
       <div>
         <input type="text" value={todo.value} onChange={this.onChangeHandler} />
-        <button onClick={this.onAddTodo}>Insert</button>
+        <button className="btn" onClick={this.onAddTodo}>Insert</button>
         <ul className="flex-grid-4">
           { todos.map((todo, index) => (
             <li key={index} className={`todo-item ${this.getColorItem(index)}`}>
               <span>{todo.value}</span>
-              <button onClick={this.removeTodo(todo)}>Remove</button>
+              <button className="btn danger" onClick={this.removeTodo(todo)}>Remove</button>
             </li>
           ))}
         </ul>

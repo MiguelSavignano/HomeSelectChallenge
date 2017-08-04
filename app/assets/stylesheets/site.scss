@@ -7,16 +7,45 @@
   width: 100%;
   flex-wrap: wrap;
   > * {
-    width: 25%;
+    width: 21%;
+    padding: 1%;
     @media (max-width: 720px){
-      width: 50%;
+      width: 48%;
+      padding: 1%;
     }
   }
 }
 
 .todo-item {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
   &.red-color {
     color: red;
+  }
+}
+
+.btn {
+  color: white;
+  padding: 5px 5px;
+  -webkit-text-align: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #538cf9;
+  border-width: 0px;
+  border-radius: 8px;
+  border: medium none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background-color: #76a2f5;
+  }
+  &.danger {
+    background-color: #e65b5b;
+    &:hover{
+      background-color: #f76c6c;
+    }
   }
 }
