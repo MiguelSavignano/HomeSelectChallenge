@@ -5,7 +5,7 @@ RSpec.describe Checkout, type: :model do
   let(:sr1) { create(:product, code: "SR1", name: "Strawberries", price: 5 )}
   let(:cf1) { create(:product, code: "CF1", name: "Cofee", price: 11.23 )}
 
-  it "total" do
+  it "#total" do
     co = Checkout.new
     co.scan(gr1)
     co.scan(sr1)
@@ -13,5 +13,15 @@ RSpec.describe Checkout, type: :model do
     co.scan(gr1)
     co.scan(cf1)
     expect(co.total).to eq(22.45)
+  end
+
+  it "#scan" do
+    co = Checkout.new
+    co.scan(gr1)
+    co.scan(sr1)
+    co.scan(gr1)
+    co.scan(gr1)
+    co.scan(cf1)
+    expect(co.products).to eq([gr1, sr1, gr1, gr1, cf1])
   end
 end
