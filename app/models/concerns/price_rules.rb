@@ -5,4 +5,11 @@ module PriceRules
     return 0 if products.empty?
     products.map(&:price).reduce(:+) / 2
   end
+
+  def self.calculate_discount_3_or_more(_products, product_code_with_discount = "SR1")
+    discount = 0.5
+    products = _products.select{|p| p.code == product_code_with_discount}
+    return 0 if products.empty? || products.size < 3
+    discount * products.size
+  end
 end
