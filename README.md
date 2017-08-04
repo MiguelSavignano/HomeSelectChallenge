@@ -1,3 +1,16 @@
+# install
+```sh
+  bundle install
+  npm install
+  rake db:create db:migrate
+```
+
+## run application
+```sh
+  rails server
+  ./bin/webpack-dev-server
+```
+
 Part1
 [point.js](https://github.com/MiguelSavignano/HomeSelectChallenge/blob/master/app/assets/javascripts/point.js)
 
