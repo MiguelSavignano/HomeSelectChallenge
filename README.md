@@ -1,24 +1,8 @@
-# README
+Part1
+[point.js](https://github.com/MiguelSavignano/HomeSelectChallenge/blob/master/app/assets/javascripts/point.js)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Part2
+[todo_list.jsx](https://github.com/MiguelSavignano/HomeSelectChallenge/blob/master/app/javascript/packs/todo_list.jsx)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Part3
+[checkout_spec.rb](https://github.com/MiguelSavignano/HomeSelectChallenge/blob/master/spec/models/checkout_spec.rb)
